@@ -8,6 +8,9 @@ import TopRated from './pages/TopRated/TopRated';
 import Carts from './pages/Cart/Carts';
 import WishLists from './pages/Wishlist/WishLists';
 import store from './redux/store';
+import Dashboard from './pages/Dashboard/Dashboard';
+import ProductList from './pages/Dashboard/ProductList';
+import AddProduct from './pages/Dashboard/AddProduct';
 
 
 function App() {
@@ -21,6 +24,12 @@ function App() {
           <Route path="/toprated" element={<TopRated />} />
           <Route path="/carts" element={<Carts />} />
           <Route path="/wishlists" element={<WishLists />} />
+
+          <Route path='/dashboard' element={<Dashboard></Dashboard>}>
+            <Route index element={<ProductList></ProductList>}></Route>
+            <Route path='/dashboard/addproduct' element={<AddProduct></AddProduct>}></Route>
+          </Route>
+
         </Routes>
       </Provider>
 

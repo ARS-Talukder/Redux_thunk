@@ -15,6 +15,18 @@ const productReducer = (state = initialState, action) => {
                 products: action.payload
             }
 
+        case actionTypes.ADD_PRODUCT:
+            return {
+                ...state,
+                products: [...state.products, action.payload]
+            }
+
+        case actionTypes.DELETE_PRODUCT:
+            return {
+                ...state,
+                products: state.products.filter((product) => product._id != action.payload)
+            }
+
         case actionTypes.ADD_TO_CART:
             // If anyone select 1 product again then the quantity will be increased
             if (selectedProduct) {

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import cart from '../../../public/cart.png';
-import { MdFavorite } from "react-icons/md";
 
 const Header = () => {
     return (
@@ -17,14 +16,10 @@ const Header = () => {
                 <Link to="/" className='btn btn-success mx-2'>Home</Link>
                 <Link to="/about" className='btn btn-success mx-2'>About</Link>
                 <Link to="/toprated" className='btn btn-success mx-2'>Top Rated</Link>
+                <Link to="/dashboard" className='btn btn-success mx-2'>Dashboard</Link>
                 <Link to="/carts" className="btn btn-ghost btn-circle mx-2">
                     <div className="indicator">
                         <img src={cart} alt="cart" />
-                    </div>
-                </Link>
-                <Link to="/wishlists" className="btn btn-ghost btn-circle mx-2">
-                    <div className="indicator text-5xl">
-                        <MdFavorite></MdFavorite>
                     </div>
                 </Link>
             </div>

@@ -6,6 +6,18 @@ export const loadProducts = (data) => {
         payload: data
     }
 }
+export const addProduct = (data) => {
+    return {
+        type: actionTypes.ADD_PRODUCT,
+        payload: data
+    }
+}
+export const deleteProduct = (id) => {
+    return {
+        type: actionTypes.DELETE_PRODUCT,
+        payload: id
+    }
+}
 
 export const addToCart = (product) => {
     return {

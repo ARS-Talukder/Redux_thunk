@@ -12,8 +12,8 @@ const Home = () => {
     const state = useSelector((state) => state);
     const products = state.product.products;
     const { brands, stock } = state.filter.filters;
-    // const products=[]
-    const obj = { x: 1, y: 2, z: 3 }; const { x, ...rest } = obj; console.log( rest);
+    // console.log("3"-3);
+    
 
     let content;
     if (products == undefined) {
